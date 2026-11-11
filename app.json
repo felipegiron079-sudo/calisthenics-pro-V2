@@ -4,19 +4,20 @@
     "slug": "calisthenics-pro",
     "version": "1.0.0",
     "orientation": "portrait",
-    "userInterfaceStyle": "dark",
+    "userInterfaceStyle": "light",
     "splash": {
-      "backgroundColor": "#080808"
+      "backgroundColor": "#F7F7F7"
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.yourbrand.calisthenicspro"
+      "bundleIdentifier": "com.felipegiron079.calisthenicspro"
     },
     "android": {
-      "package": "com.yourbrand.calisthenicspro",
+      "package": "com.felipegiron079.calisthenicspro",
       "adaptiveIcon": {
         "backgroundColor": "#080808"
-      }
+      },
+      "versionCode": 1
     }
   }
 }
