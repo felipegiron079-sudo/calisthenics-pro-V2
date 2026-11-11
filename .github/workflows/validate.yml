@@ -1,0 +1,26 @@
+name: Validar CALISTHENICS PRO
+
+on:
+  push:
+    branches: [main, calisthenics-pro-v2-rebuild]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    name: Revisar TypeScript y generar bundle Android
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Instalar dependencias
+        run: npm install
+      - name: Revisar tipos de TypeScript
+        run: npm run typecheck
+      - name: Comprobar bundle de Android
+        run: npm run check:android
